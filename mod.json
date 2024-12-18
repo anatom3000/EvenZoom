@@ -1,0 +1,69 @@
+{
+	"name": "Even Zoom",
+	"description": "Makes zooming in the editor even",
+	"developer": "anatom3000",
+    "repository": "https://github.com/anatom3000/EvenZoom",
+	"id": "anatom3000.evenzoom",
+	"version": "v1.0.0",
+	"geode": "4.0.1",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+    "settings": {
+        "zoom-step": {
+            "type": "float",
+            "name": "Zoom Factor",
+            "description": "Changes the factor by which zoom level is multiplied",
+            "default": 1.1,
+            "min": 1.0,
+            "max": 2.0,
+            "control": {
+                "input": true,
+                "arrows": true,
+                "arrow-step": 0.05,
+                "slider": true,
+                "slider-step": 0.01
+            }
+        },
+        "limit-zoom": {
+            "type": "bool",
+            "name": "Limit Zoom",
+            "default": true
+        },
+        "min-zoom": {
+            "enable-if": "limit-zoom",
+            "type": "float",
+            "name": "Minimum Zoom",
+            "default": 0.008,
+            "min": 0.0,
+            "control": {
+                "input": true,
+                "arrows": true,
+                "arrow-step": 0.001,
+                "slider": false
+            }
+        },
+        "max-zoom": {
+            "enable-if": "limit-zoom",
+            "type": "float",
+            "name": "Maximum Zoom",
+            "default": 100.0,
+            "min": 0.0,
+            "control": {
+                "input": true,
+                "arrows": true,
+                "arrow-step": 1.0,
+                "slider": false
+            }
+        }
+    },
+    "tags": [
+        "editor",
+        "enhancement",
+        "interface",
+        "offline"
+    ]
+}
